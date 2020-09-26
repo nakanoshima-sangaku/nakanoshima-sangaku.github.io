@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta name="viewport" content="width=device-width,user-scalable=yes,maximum-scale=2">
+    <meta charset="utf-8">
+    <style media="screen">
+      html,
+      body,
+      #map {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <title>
+      中之島山岳部 - 山行記録
+    </title>
+  </head>
+
+  <body>
+    <script src="../script/map2.js"></script>
+    <noscript>JavaScriptが利用できません。</noscript>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv4aC-1TAdo0EH0siANpgnRzVyjQAQiKs&libraries=places">
+      </script>
+    <input class="yearchecker" type="checkbox" id="check2016" checked="checked"><label for="check2016">2016年度</label>
+    <input class="yearchecker" type="checkbox" id="check2017" checked="checked"><label for="check2017">2017年度</label>
+    <input class="yearchecker" type="checkbox" id="check2018" checked="checked"><label for="check2018">2018年度</label>
+    <input class="yearchecker" type="checkbox" id="check2019" checked="checked"><label for="check2019">2019年度</label>
+    <div id="map_container">
+      <div id="map"></div>
+    </div>
+  </body>
+
+</html>

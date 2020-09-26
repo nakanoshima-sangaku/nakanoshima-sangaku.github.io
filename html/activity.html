@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="utf-8">
+    <!-- <meta name="ROBOTS" content="NOINDEX,NOFOLLOW"> -->
+    <meta name="viewport" content="width=device-width,user-scalable=yes,maximum-scale=2">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <!--[if lt IE 9]>
+		document.createElement('article');
+		document.createElement('section');
+		document.createElement('nav');
+	<![endif]-->
+    <title>
+      中之島山岳部 - 活動記録
+    </title>
+  </head>
+
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../script/map.js"></script>
+    <script src="../script/jquery.js"></script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv4aC-1TAdo0EH0siANpgnRzVyjQAQiKs&libraries=places">
+      </script>
+    <noscript>JavaScriptが利用できません。</noscript>
+    <header>
+      <div id="logo">中之島山岳部</div>
+      <nav id="topmenu">
+        <ul>
+          <li><a href="../index.html">ホーム</a></li>
+          <li><a href="about.html">部活紹介</a> </li>
+          <li><a href="activity.html">活動記録</a></li>
+          <li><a href="http://yamazaru.exblog.jp/">ブログ</a></li>
+          <li><a href="link.html">リンク</a></li>
+          <div class="c-both"></div>
+        </ul>
+      </nav>
+    </header>
+    <article>
+      <section>
+        <h2 id="map_header">山行記録</h2>
+        <input class="yearchecker" type="checkbox" id="check2016" checked="checked"><label
+          for="check2016">2016年度</label>
+        <input class="yearchecker" type="checkbox" id="check2017" checked="checked"><label
+          for="check2017">2017年度</label>
+        <input class="yearchecker" type="checkbox" id="check2018" checked="checked"><label
+          for="check2018">2018年度</label>
+        <input class="yearchecker" type="checkbox" id="check2019" checked="checked"><label
+          for="check2019">2019年度</label>
+        <input class="yearchecker" type="checkbox" id="check2020" checked="checked"><label
+          for="check2019">2020年度</label>
+        <div id="map_container">
+          <div id="map"></div>
+        </div>
+        <!--<li><a href="map.html" target="_blank">別ウィンドウ表示</a></li>-->
+        <hr>
+      </section>
+      <section>
+        <h3 id="year_header">年度別活動記録</h3>
+        <nav id="choose_year">
+          <ul>
+            <li><span class="year" id="year2016">2016年度</span></li>
+            <li><span class="year" id="year2017">2017年度</span></li>
+            <li><span class="year" id="year2018">2018年度</span></li>
+            <li><span class="year" id="year2019">2019年度</span></li>
+            <li><span class="year" id="year2020">2020年度</span></li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="activity" id="activity2020">
+        <h2>2020年度活動一覧</h2>
+        <ul>
+          <li>2020.09.20 新歓山行 @生駒山</li>
+        </ul>
+      </section>
+      <section class="activity" id="activity2019">
+        <h2>2019年度活動一覧</h2>
+        <ul>
+          <li>2019.04.13 新歓山行 @生駒山</li>
+          <li>2019.04.21 新歓山行 @摩耶山</li>
+          <li>2019.04.28 GW山行 @藤原岳</li>
+          <li>2019.05.01 大峰奥駈</li>
+          <li>2019.09.28 定例山行 @金剛山</li>
+          <li>2019.11.02 テント泊山行 @比良山系</li>
+          <li>2019.12.14〜15 テント泊山行 @台高山脈</li>
+          <li>2020.01.19 雪山日帰り @荒島岳</li>
+          <li>2020.02.23〜24 テント泊山行 @八雲ヶ原</li>
+          <li>2020.03 春合宿 @八幡平、みちのく潮風トレイル</li>
+        </ul>
+      </section>
+      <section class="activity" id="activity2018">
+        <h2>2018年度活動一覧</h2>
+        <ul>
+          <li>2018.04.14 新歓山行 @生駒山</li>
+          <li>2018.04.22 新歓山行 @摩耶山</li>
+          <li>2018.06.17 定例山行 @六甲山</li>
+          <li>2018.07.22 定例山行 @和泉葛城山</li>
+          <li>2018.08.05〜06 プレ合宿 @白山</li>
+          <li>2018.08.17〜19 夏合宿 @木曽駒ケ岳</li>
+          <li>2018.11.23〜25 秋合宿 @石鎚山脈</li>
+        </ul>
+      </section>
+      <section class="activity" id="activity2017">
+        <h2>2017年度活動一覧</h2>
+        <ul>
+          <li>2017.04.15 新歓山行 @武田尾廃線</li>
+          <li>2017.04.23 新歓山行 @ポンポン山</li>
+          <li>2017.05.29 定例山行 @六甲山</li>
+          <li>2017.06.12 定例山行 @蓬莱山</li>
+          <li>2017.06.24 定例山行 @蛇谷ヶ峰</li>
+          <li>2017.07.09 定例山行 @金剛山, 焼肉パーティー @鶴橋</li>
+          <li>2017.08.23〜25 夏合宿 @北岳</li>
+          <li>2017.10.07 OB会 @中之島キャンパス</li>
+          <li>2017.10.15 定例山行 @竜王山</li>
+          <li>2017.11.12 定例山行 @桟敷ヶ岳</li>
+          <li>2017.12.09 定例山行 @竜王山</li>
+          <li>2018.3.19〜21 春合宿 @九重連山</li>
+        </ul>
+      </section>
+      <section class="activity" id="activity2016">
+        <h2>2016年度活動一覧</h2>
+        <ul>
+          <li>2016.04.16 新歓山行 @高槻 ポンポン山</li>
+          <li>2016.04.23 新歓山行その2 @京都 音羽山</li>
+          <li>2016.05.08〜09 テント泊山行 @大峰 稲村ヶ岳</li>
+          <li>2016.05.14 新歓飲み @千里中央</li>
+          <li>2016.05.22 個人企画 @比良 武奈ヶ岳</li>
+          <li>2016.05.28 定例山行 @六甲山、摩耶山</li>
+          <li>2016.06.11 定例山行 @比良 蓬莱山</li>
+          <li>2016.06.26 定例山行 @六甲 須磨アルプス、山本先生焼肉会 @鶴橋</li>
+          <li>2016.07.03 定例山行 @和泉 岩湧山</li>
+          <li>2016.07.31 定例山行 @比良　北比良峠</li>
+          <li>2016.08.01〜05 双六診療所見学</li>
+          <li>2016.08.07〜08 プレ合宿 @明神平</li>
+          <li>2016.08.10〜13 双六診療所見学第2班</li>
+          <li>2016.08.20〜24 夏合宿 @北アルプス 穂高、槍</li>
+          <li>2016.09.24 定例山行 @裏六甲　大池地獄谷、六甲アルプス</li>
+          <li>2016.10.08 OB会 @中之島キャンパス</li>
+          <li>2016.11.03〜04 秋合宿 @鈴鹿 雨乞岳</li>
+          <li>2016.11.12 定例山行 @京都 愛宕山</li>
+          <li>2016.11.13 沢登り @大峰 下多古川</li>
+          <li>2016.11.23 定例山行 @奈良 曽爾高原</li>
+          <li>2016.12.18 定例山行 @京都 金毘羅山, 忘年会 @千里中央</li>
+          <li>2017.02.13 祝賀会 @梅田 バルバッコア</li>
+          <li>2017.03.27〜30 春合宿 @屋久島</li>
+        </ul>
+      </section>
+    </article>
+    <footer>
+      <small>(C)2017 中之島山岳部</small>
+    </footer>
+  </body>
+
+</html>

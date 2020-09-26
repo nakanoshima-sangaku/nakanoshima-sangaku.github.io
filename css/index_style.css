@@ -1,0 +1,122 @@
+/* パソコン用設定 */
+@media screen and (min-width:641px) {
+  .picture{        /* 一般写真用 */
+    width: 90%;
+  }
+  body {
+    background-color: #d3d3d3;
+    padding: 10px 20px;
+  }
+  #topmenu{
+    text-align: center;
+    margin-top: 10px;
+  }
+  #wrap{            /* ロゴとメニュー以外 */
+      margin: auto;
+      max-width: 1010px;
+  }
+  article{
+    margin-left: 210px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 30px 35px;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 5px;
+  }
+  #leftcontent{
+    width: 200px;
+    margin-left: 0px;
+    float:left;
+  }
+  #gmail{
+    width:200px;
+    position:relative; top: 6px;
+  }
+}
+
+/* スマホ用設定 */
+@media screen and (max-width:640px) {
+  .picture{
+    width: 95%;
+  }
+  body {
+    background-color: #d3d3d3;
+    padding: 5px 5px;
+  }
+  #topmenu{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  #wrap{
+      margin: auto;
+      display: flex;
+      flex-direction: column-reverse;
+  }
+  article{
+    padding: 10px;
+    width: auto;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  h2,h3{
+    text-align: center;
+  }
+  #leftcontent{
+    width: auto;
+    margin: 0px;
+  }
+  #map_container{
+    width: 100%;
+    height: 500px;
+  }
+  #gmail{
+    width:150px;
+    position:relative; top:4px;
+  }
+}
+
+
+/* 共通設定 */
+#logo{
+  font-size: 40px;
+  color: #005087;
+  text-align: center;
+}
+#topmenu ul{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+#topmenu ul li{
+  list-style: none;
+  height: 25px;
+  float: left;
+}
+
+#topmenu ul li a {
+  margin-left: 20px;
+}
+
+#topmenu ul li a:hover{
+  color: #F90;
+}
+
+.c-both{
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+footer{
+  text-align: center;
+  margin: auto;
+  color: white;
+  background-color: #005087;
+  max-width: 1010px;
+  border-radius: 5px;
+}

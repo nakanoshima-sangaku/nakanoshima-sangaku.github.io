@@ -1,0 +1,133 @@
+/* パソコン用設定 */
+@media screen and (min-width:641px) {
+  body {
+    background-color: #d3d3d3;
+    padding: 10px 20px;
+  }
+  #topmenu{
+    text-align: center;
+    margin-top: 10px;
+  }
+  article{
+    margin: 10px auto;
+    padding: 30px 35px;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 5px;
+  }
+  .picture{
+    width: 80%;
+  }
+
+  #map_header { margin-top: 0; margin-bottom: 0px; display: inline;}
+  .yearchecker { margin-left: 2em; }
+}
+
+/* スマホ用設定 */
+@media screen and (max-width:640px) {
+  body {
+    background-color: #d3d3d3;
+    padding: 5px 5px;
+  }
+  #topmenu{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  article{
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  h2,h3{
+    text-align: center;
+  }
+  .picture{
+    width: 95%;
+  }
+}
+/* 共通設定 */
+#logo{
+  font-size: 40px;
+  text-align: center;
+  color: #005087;
+}
+
+#topmenu ul{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+#topmenu ul li{
+  list-style: none;
+  height: 25px;
+  float: left;
+}
+
+#topmenu ul li a {
+  margin-left: 20px;
+}
+
+#topmenu ul li a:hover{
+  color: #F90;
+}
+
+.c-both{
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+footer{
+  text-align: center;
+  margin: auto;
+  color: white;
+  background-color: #005087;
+  max-width: 970px;
+  border-radius: 5px;
+}
+
+#map_container{
+  width: 100%;
+  height: 500px;
+}
+#map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+#post{
+  margin: 10px;
+}
+
+#year_header{
+  margin-bottom: 0;
+}
+
+#choose_year{
+  height: 30px;
+}
+
+#choose_year ul{
+  display: inline-block;
+  margin: -0;
+  padding: 0;
+}
+
+#choose_year ul li{
+  list-style: none;
+  height: 25px;
+  float: left;
+  margin-left: 20px;
+}
+
+.year {
+  color: #00f;
+  text-decoration: underline;
+  cursor: pointer;
+}
