@@ -17,7 +17,7 @@ $(document).ready(function() {
   });  //
   [2016, 2017, 2018, 2019, 2020].forEach(year => {
     $(`#year${year}`).on('click', () => $(`#activity${year}`).show());
-    if (year !== year_to_show) {
+    if (year !== year_default) {
       $(`#activity${year}`).hide()
     }
   });

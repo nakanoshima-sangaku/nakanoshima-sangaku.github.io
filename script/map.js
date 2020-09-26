@@ -43,22 +43,21 @@ Date.prototype.nendo =
                       .filter(x => x.checked)
                       .map(x => Number(x.id.slice(-4)));
     const places = APP.trekkingData.filter(x => years.includes(x[2].nendo()))
-                       .map(x => x[0].slice(0, -2));
-    console.log(years, places)
+                       .map(x => x[0]);
+    // console.log(years, places)
     APP.markerList.forEach(
         marker => marker.setVisible(places.includes(marker.placeid)));
   },
   createContent: function(place) {  // 表示テキスト(html)を作る
                 return `<p><b>${place[1]}</b></p>`								// とりあえず場所名
 			+ APP.trekkingData
-					.filter(trek => trek[0].slice(0,-2) === place[0])		// 場所に付随する山行データを取得, trek[1]は山の名前
+					.filter(trek => trek[0] === place[0])		// 場所に付随する山行データを取得, trek[1]は山の名前
 					.map(trek => {
-						const [id, title, start, end]  = trek
-                console.log(id, title, start, end)
+						const [id, title, start, end, url, comment]  = trek
                                                 return `<p>${title} : ${start.getString(end)}</p>`			// 山行タイトル、日時表示
-							+ (APP.textData.has(id) ? `<p>${APP.textData.get(id)}</p>` : '')
-							+ (APP.urlData.has(id) ?
-							  `<p>ブログ : <a href="${APP.urlData.get(id)}" target="_blank">${APP.urlData.get(id)}</a></p>` : '')
+							+ (comment && `<p>${comment}</p>`)
+							+ (url &&
+							  `<p>ブログ : <a href="${url}" target="_blank">${url}</a></p>`)
 					}).join('<hr>');
   },
   createMarker: function(place) {  // マーカー生成
@@ -118,13 +117,13 @@ APP.initMap = async function() {
                             y => y.trim()))  // コンマで区切って、トリム)
         )
   };
-  const [place, trek, url, text] = await Promise.all(
-      'place.csv trekking.csv url.csv text.csv'.split(' ').map(getCSV))
+  const [place, trek] =
+      await Promise.all('place.csv trekking.csv'.split(' ').map(getCSV))
   APP.placeData = place;
-  APP.trekkingData =
-      trek.map(x => [x[0], x[1], new Date(x[2], x[3] - 1, x[4]), Number(x[5])]);
-  APP.urlData = new Map(url);
-  APP.textData = new Map(text);
+  APP.trekkingData = trek.map(
+      x =>
+          [x[0], x[1], new Date(x[2], x[3] - 1, x[4]), Number(x[5]),
+           x.length > 6 ? x[6] : '', x.length > 7 ? x[7] : '']);
 
   APP.placeData.forEach(APP.visual.createMarker);
   APP.visual.changeMarkerVisual();
