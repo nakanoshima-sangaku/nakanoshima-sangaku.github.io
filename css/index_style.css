@@ -120,3 +120,8 @@ footer{
   max-width: 1010px;
   border-radius: 5px;
 }
+
+#wrapper {
+    height: 100px;
+    overflow-y: scroll;
+}
